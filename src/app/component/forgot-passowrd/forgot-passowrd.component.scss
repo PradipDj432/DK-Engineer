@@ -1,0 +1,35 @@
+@import "../../../assets/scss/main.scss";
+
+.btn{
+    &.yellow-btn{
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+.bg-text{
+    margin: 10px 0;
+    text-align: center;
+    &.without-underline{
+        text-decoration: none;
+        color: $blur-black;
+        text-align: center;
+        display: block;
+    } 
+  
+}
+a{
+    .bg-text{
+        margin-bottom: 20px;
+        text-align: center;
+        &.without-underline{
+            text-decoration: none;
+            color: $blur-black;
+            text-align: center;
+            display: block;
+        } 
+      
+    }
+    &:hover{
+        color: $primary-color !important;
+    }
+}

@@ -1,0 +1,56 @@
+<section class="shipper-banner-section">
+    <div class="container">
+        <h1>SHIPPER-LOGIN</h1>
+    </div>
+</section>
+<section class="shipper-login-section">
+    <div class="container">
+        <div class="shipper-login-block">
+        
+
+            <mat-tab-group class="custom-tabing" [disableRipple]="true">
+                <mat-tab >
+                    <ng-template mat-tab-label>
+                        <i>
+                        <img src="../../../assets/images/logo-partner/importer-yellow.svg" class="active" />
+                        <img src="../../../assets/images/importer.svg" class="non-active" />
+                        </i>
+                        <span class="bg-text"> importer</span>
+                        
+                    </ng-template>
+                    <app-mrn-login> </app-mrn-login>
+               
+                    <!-- <app-comon-component>
+                        <router-outlet></router-outlet>
+                    </app-comon-component> -->
+                 
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <i>
+                        <img src="../../../assets/images/exporter-yellow.svg" class="active" />
+                        <img src="../../../assets/images/exporter.svg" class="non-active" />
+                        </i>
+                        <span class="bg-text"> exporter</span> </ng-template>
+                        <app-mrn-registration> </app-mrn-registration>
+                    
+                        <!-- <app-comon-component>
+                            <router-outlet></router-outlet>
+                        </app-comon-component> -->
+                </mat-tab>
+                <mat-tab  >
+                    <ng-template mat-tab-label><i>
+                            <img src="../../../assets/images/forwarder-yellow.svg" class="active" />
+                            <img src="../../../assets/images/forwarder.svg" class="non-active" />
+                        </i>
+                        <span class="bg-text"> Forwarder</span> </ng-template>
+                        <app-mrn-login> </app-mrn-login>
+                   
+                        <!-- <app-comon-component>
+                            <router-outlet></router-outlet>
+                        </app-comon-component> -->
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</section>

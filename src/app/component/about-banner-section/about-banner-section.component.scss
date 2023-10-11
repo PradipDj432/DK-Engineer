@@ -1,0 +1,43 @@
+@import "../../../assets/scss/main.scss";
+
+.banner-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    background-image: url(../../../assets/images/aboutcdn-banner-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 10px;
+    text-align: center;
+    h1{
+        color: $white;
+        margin-top: 100px;
+    }
+  
+}
+
+// .ctn-requirement-section{
+//     .requirement-least{
+//         margin-bottom: 30px;
+//         list-style: none;
+//         padding-left: 15px;
+//         li{
+//             padding: 5px 0;
+//             position: relative;
+//             &::after{
+//                 position: absolute;
+//                 left: -15px;
+//                 top: 10px;
+//                 // transform: translateY(-50%);
+//                 height: 8px;
+//                 width: 8px;
+//                 content: "";
+//                 background-color: $primary-color;
+//                 border-radius: 50%;
+//             }
+          
+//         }
+//     }
+// }

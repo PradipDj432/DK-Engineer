@@ -1,0 +1,34 @@
+@import "../../../assets/scss/main.scss";
+
+.mrn-banner-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    background-image: url(../../../assets/images/MRN-login-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 10px;
+    text-align: center;
+    h1{
+        color: $white;
+        
+    }
+  
+}
+.form-section{
+    padding: 40px 0;
+
+    .login-registration-form{
+        max-width: 500px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    .btn{
+        &.yellow-btn{
+            width: 100% !important;            
+                   
+                }
+    }
+}

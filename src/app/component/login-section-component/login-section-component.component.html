@@ -1,0 +1,22 @@
+<section class="login-section">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+
+    <div class="login-containt">
+        
+        <h1>DK ENGINEER'S : Your source for all types of industrial hardware.</h1>
+        <br><br>
+        <p class="bg-text">At DK ENGINEER'S, we're your trusted source for top-quality industrial hardware across diverse industries. With years of experience, we deliver tailored solutions to boost efficiency and success. Explore our range and experience the difference.
+            <!-- <div class="button-group">
+                <a routerLink="/shipper" title="Shipper Login" mat-button class="btn yellow-btn">SHIPPER LOGIN</a>
+                <a routerLink="/mrn" title="MRN Login" mat-button class="btn yellow-btn">MRN LOGIN</a>
+            </div>   -->
+    </div>
+   
+
+
+</section>

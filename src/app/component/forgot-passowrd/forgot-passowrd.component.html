@@ -1,0 +1,16 @@
+<mat-form-field class="custom-form-field border" appearance="outline">
+    <input matInput placeholder="Login ID" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="custom-form-field border" appearance="outline">
+    
+    <input matInput [type]="hide ? 'password' : 'text'" placeholder="new Password" required="true" [formControl]="password2">
+    <mat-error *ngIf="name.invalid">{{getErrorMessagep()}}</mat-error>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button mat-button class="btn yellow-btn" routerLink="../mrn_login">SUBMIT</button>
+  <p class="bg-text ">Don't have an account ? <a routerLink="../mrn_registration" title="Register now" class="bg-text ">Register now</a>  </p>
+  <p class="bg-text ">Already have account ? <a routerLink="../mrn_login" title="Register now" class="bg-text ">Login</a>  </p>

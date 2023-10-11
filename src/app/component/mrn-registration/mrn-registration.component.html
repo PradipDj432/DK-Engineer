@@ -1,0 +1,87 @@
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Carrier Name  </mat-label>
+    <input matInput placeholder="" required aria-required="true" [formControl]="name1">
+    <mat-error *ngIf="name.invalid">{{getErrorMessagep()}}</mat-error>  
+</mat-form-field>
+
+ 
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Address  </mat-label>
+    <input matInput placeholder="" required  aria-invalid="true"  [formControl]="name2"> 
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>   
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder=" " [formControl]="email" required >
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Phone   </mat-label>
+    <example-tel-input formControlName="tel" required></example-tel-input>
+    <input matInput placeholder="" required [formControl]="name3"> 
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>  
+</mat-form-field> 
+
+
+
+
+
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Country </mat-label>
+    <mat-select required [formControl]="name4">
+      <mat-option value="option">Option</mat-option>
+      <mat-option value="option">Option</mat-option>
+      <mat-option value="option">Option</mat-option>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error> 
+  </mat-form-field>
+
+  <div class="uplod-file">
+    <mat-form-field appearance="fill" class="custom-form-field-lable">
+        <mat-label>Registration Certificate </mat-label>
+        <input matInput placeholder="" readonly="true " required [formControl]="name5">  
+        <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error> 
+    </mat-form-field>
+    <button mat-button class="btn yellow-btn">Upload</button>
+  </div>
+
+
+ 
+
+  <mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Carrier Username   </mat-label>
+    <input matInput placeholder="" required  [formControl]="name6"> 
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error> 
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label> password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" placeholder=" " required="true"  [formControl]="password">
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+
+
+
+
+  <mat-form-field appearance="fill" class="custom-form-field-lable">
+    <mat-label>Conform password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" placeholder="" required="true" [formControl]="password2">
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+ 
+
+  <button mat-button class="btn yellow-btn">REGISTER</button>
+
+  <p class="bg-text ">Already have an account ? <a routerLink="../mrn_login" title="Register now" class="bg-text " >Login</a>  </p>

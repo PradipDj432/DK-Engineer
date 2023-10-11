@@ -1,0 +1,70 @@
+@import "../../../assets/scss/main.scss";
+
+.authority-section {
+
+    padding: 50px 0;
+
+    .authority-block {
+        display: flex;
+        margin: 0 -15px;
+        align-items: center;
+flex-wrap: wrap;
+@include bp(smlg-max){
+   margin: 0;
+}
+        .img-block {
+            padding: 0 15px;
+            flex: 0 0 50%;
+            max-width: 50%;
+            overflow: hidden;
+           
+            @include bp(smd-max ){
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+            @include bp(smlg-max){
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+            .img {
+                overflow: hidden;
+                border-radius: 10px !important;
+                img {
+                    height: 100%;
+                    width: 100%;                  
+                    transition: all 0.4s !important;
+                    border-radius: 10px !important;
+                    &:hover {
+                        scale: 1.02;
+                        transition: all 0.4s;
+                        border-radius: 10px !important;
+                    }
+                }
+            }
+
+        }
+
+        .content-block {
+            padding: 0 15px;
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            p {
+                line-height: 1.5 !important;
+            }
+            @include bp( smd-max){
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+            @include bp(smlg-max){
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+

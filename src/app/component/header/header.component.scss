@@ -1,0 +1,168 @@
+@import "../../../assets/scss/main.scss";
+
+
+.header {
+
+    
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    transition: all 0.5s !important;
+
+    .header-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $transpernt-black;
+            display: none;
+        }
+        
+        
+        .header-link {
+            display: flex;
+            list-style-type: none;
+
+            @include bp(smlg-max) {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+
+            li {
+                padding: 5px 15px;
+                color: $white;
+                position: relative;
+                cursor: pointer;
+                &:hover {
+                    color: $primary-color;
+                    transition: all 0.6s;
+                }
+                .custom-menu {
+                    position: absolute;
+                    background-color: $white;
+                    color: $blur-black;
+                    border-radius: 10px;
+                    top: 40px !important;
+
+                    &#open_menu {
+                        display: none;
+                    }
+
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: larger;
+                    font-weight: bolder;
+                    color: $white;
+                    transition: all 0.6s;
+
+                    &:hover {
+                        color: $primary-color;
+                        transition: all 0.6s;
+                    }
+                }
+            }
+        }
+
+        .header-left-block {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 70px;
+                width: 70px;
+                transition: all 0.5s !important;
+
+                @include bp(smd-max) {
+                    height: 70px;
+                    width: 70px;
+                }
+            }
+            
+        }
+
+        .header-right-block {
+            transition: all 0.5s !important;
+            display: flex;
+            align-items: center;
+            h3{
+                margin-top: 20px;
+                margin-right: 20px;
+                color: white;
+               }
+            img {
+                width: 110px;
+                height: 70px;
+                transition: all 0.5s !important;
+
+                @include bp(smd-max) {
+                    width: 85px;
+                    height: 50px;
+                }
+            }
+
+            @include bp(smlg-max) {
+                position: fixed;
+                top: 0;
+
+                right: -220px;
+                bottom: 0;
+                height: 100%;
+                background-color: $blur-black;
+                flex-direction: column;
+                width: 220px;
+                justify-content: center;
+            }
+
+     
+
+        }
+
+
+    }
+
+    .menu-icon {
+        padding: 5px;
+        cursor: pointer;
+        z-index: 20;
+
+        .bar1 {
+            height: 2px;
+            width: 25px;
+            background-color: #ffffff;
+            margin-bottom: 3px;
+            transition: all 0.5s;
+        }
+
+        .bar2 {
+            height: 2px;
+            width: 25px;
+            background-color: #ffffff;
+            margin-bottom: 3px;
+            transition: all 0.5s;
+        }
+
+        .bar3 {
+            height: 2px;
+            width: 25px;
+            background-color: #ffffff;
+            margin-bottom: 3px;
+            transition: all 0.5s;
+        }
+    }
+
+    
+}

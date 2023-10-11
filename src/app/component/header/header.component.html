@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="container">
+    <div class="header-block">
+      <div class="overlay" (click)="closemenu()"></div>
+      <div class="header-left-block">
+        <a routerLink="home" title="CTN"><img src="../../../assets/images/logo.png"> </a>
+        
+        <ul class="header-link mobile-hide">
+          <li><a routerLink="home" routerLinkActive="active" title="Home">Home</a></li>
+          <li><a routerLink="product" routerLinkActive="active" title="Product">Product</a></li>
+          <li><a routerLink="about" routerLinkActive="active" title="About">About</a></li>
+          <li><a routerLink="service" routerLinkActive="active" title="Service">Service</a></li>
+          <!-- <li><a routerLink="Partner" routerLinkActive="active" title="Partner">Partner</a></li> -->
+          <!-- <li><a routerLink="contact" routerLinkActive="active" title="Location">Location</a></li> -->
+          <li><a routerLink="contact" routerLinkActive="active" title="Contact">Contact</a></li>
+
+
+          
+        </ul>
+      </div>
+      <div class="header-right-block">
+        <h3>DK ENGINEER'S</h3>
+        <!-- <mat-form-field class="custom-form-field custom-select-form " appearance="outline">
+          <mat-select placeholder="My Account">
+            <mat-option value="one">Seting</mat-option>
+            <mat-option value="two">Logout</mat-option>
+            <mat-option value="three">MyProfile</mat-option>
+            <mat-option value="four">CTM list</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+        <!-- <mat-form-field class="custom-form-field custom-select-form cusotm-border-none" appearance="outline">
+          <mat-select placeholder="EN">
+            <mat-option value="one">GUJ</mat-option>
+            <mat-option value="two">HINDI</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+        <img src="../../../assets/images/flag.png">
+        <ul class="header-link mobile-show">
+          <li><a routerLink="home" routerLinkActive="active" title="Home" (click)="toggleMobileMenu()">Home</a></li>
+          <li><a routerLink="product" routerLinkActive="active" title="Product" (click)="toggleMobileMenu()">Product</a></li>
+          <li><a routerLink="about" routerLinkActive="active" title="About" (click)="toggleMobileMenu()">About</a></li>
+          <li><a routerLink="service" routerLinkActive="active" title="About" (click)="toggleMobileMenu()">Service</a></li>
+          <!-- <li><a routerLink="Partner" routerLinkActive="active" title="About">Partner</a></li> -->
+          <!-- <li><a routerLink="Location" routerLinkActive="active" title="About">Location</a></li> -->
+          <li><a routerLink="contact" routerLinkActive="active" title="About" (click)="toggleMobileMenu()">Contact</a></li>
+        </ul>
+
+      </div>
+      <div class="menu-icon mobile-show" (click)="toggleMobileMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </div>
+</header>
