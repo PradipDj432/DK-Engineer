@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular project
+      - name: Build Angular projecty
         run: ng build --prod
 
       - name: Run tests
