@@ -33,32 +33,20 @@ jobs:
         run: npm ci
 
       - name: Build Angular project
-        run: |
-          ng build --configuration=production
-          ls -l dist
+        run: ng build --configuration=production
 
-      - name: Create zip archive
+      - name: Create and upload zip archive
         if: success() && steps.build.outcome == 'success'
         run: |
-          # Check if the 'dist' directory exists
-          if [ -d "dist" ]; then
-            # Create a zip archive of the 'dist' directory
-            zip -r published-files.zip dist/
-            ls -l published-files.zip
-          else
-            echo "Error: 'dist' directory not found. Build might have failed."
-            exit 1
-          fi
+          # Create a zip archive of the 'dist' directory
+          zip -r published-files.zip dist/
+          # Upload the zip archive as an artifact
+          echo "::set-output name=zip_file::published-files.zip"
+        id: create-zip
 
-      - name: List artifacts
-        if: always()
-        run: |
-          ls -l
-          ls -l published-files.zip
-
-      - name: Upload zip archive
+      - name: Download zip artifact
         if: success() && steps.build.outcome == 'success'
-        uses: actions/upload-artifact@v2
+        uses: actions/download-artifact@v2
         with:
-          name: published-files
-          path: published-files.zip
+          name: ${{ steps.create-zip.outputs.zip_file }}
+          path: ./
