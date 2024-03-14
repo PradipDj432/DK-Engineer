@@ -27,13 +27,14 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: ng build --configuration=production
-        working-directory: ./docs
+        run: |
+          cd "C:/Users/Pradip_Optimum/Desktop/Coding/DK/docs"
+          ng build --configuration=production
 
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          cd docs
+          cd "C:/Users/Pradip_Optimum/Desktop/Coding/DK/docs/dist"
           zip -r ${{ github.workspace }}/publish_zip/publish.zip .
 
       - name: Upload artifact
