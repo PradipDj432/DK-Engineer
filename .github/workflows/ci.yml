@@ -13,28 +13,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Install Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'  # Upgraded to Node.js version 18
+      # Add any necessary setup steps here
 
-      # Install Angular CLI
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
-      # Build Angular project
       - name: Build Angular project
         run: ng build --configuration=production
 
-      # Package and upload artifact
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
           cd ${{ github.workspace }}/dist
           zip -r ${{ github.workspace }}/publish_zip/publish.zip *
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish_zip/publish.zip
+          path: ${{ github.workspace }}/publish_zip/publish.zip 
+
+      - name: Download artifact
+        if: success() && steps.build.outcome == 'success'
+        uses: actions/download-artifact@v2
+        with:
+          name: publish
+          path: ${{ github.workspace }}/publish_zip
