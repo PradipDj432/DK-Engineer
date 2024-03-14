@@ -18,14 +18,28 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Angular project
-        run: ng build --configuration=production
+        run: ng build --prod
 
       - name: Run tests
         run: npm test
+
+      - name: Deploy
+        if: success()
+        run: |
+          # Add your deployment script here
+          # Example: npm run deploy
