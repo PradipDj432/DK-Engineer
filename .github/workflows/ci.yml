@@ -32,8 +32,7 @@ jobs:
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          cd dist
-          zip -r ${{ github.workspace }}/publish_zip/publish.zip .
+          zip -r ${{ github.workspace }}/publish_zip/publish.zip dist
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
