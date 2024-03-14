@@ -48,5 +48,5 @@ jobs:
         if: success() && steps.build.outcome == 'success'
         uses: actions/download-artifact@v2
         with:
-          name: ${{ steps.create-zip.outputs.zip_file }}
-          path: ./
+          name: ${{ steps.create-zip.outputs.zip_file }}  # Use the zip file name set as an output
+          path: ./  # Download the zip file to the current directory
