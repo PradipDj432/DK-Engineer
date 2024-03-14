@@ -39,7 +39,13 @@ jobs:
       #  run: npm test
 
       - name: Download published files
-        if: success()
+        if: success() && steps.build.outcome == 'success'
         run: |
-          # Download 'dist' directory to the current directory
-          cp -r dist/* ./
+          # Check if the 'dist' directory exists
+          if [ -d "dist" ]; then
+            # Download 'dist' directory to the current directory
+            cp -r dist/* ./
+          else
+            echo "Error: 'dist' directory not found. Build might have failed."
+            exit 1
+          fi
