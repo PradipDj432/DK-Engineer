@@ -29,15 +29,14 @@ jobs:
 
       - name: Package
         run: |
-          mkdir -p ${{ github.workspace }}/publish_zip
-          # Zip only the docs folder
-          zip -r ${{ github.workspace }}/publish_zip ./docs
-
+          mkdir -p ${{ github.workspace }}/publish
+          cd ${{ github.workspace }}/docs
+          zip -r ${{ github.workspace }}/publish/publish_docs.zip .
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish_zip
+          path: ${{ github.workspace }}/publish
 
   download:
     runs-on: ubuntu-latest
@@ -48,4 +47,4 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish_zip
+          path: ${{ github.workspace }}/publish
