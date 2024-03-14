@@ -28,12 +28,12 @@ jobs:
 
       - name: Build Angular project
         run: ng build --configuration=production
-        working-directory: .
+        working-directory: ./docs   # Assuming 'docs' is the folder containing your Angular project
 
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          cd dist
+          cd ./docs
           zip -r ${{ github.workspace }}/publish_zip/publish.zip .
 
       - name: Upload artifact
