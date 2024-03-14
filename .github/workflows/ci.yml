@@ -33,7 +33,9 @@ jobs:
         run: npm ci
 
       - name: Build Angular project
-        run: ng build --configuration=production
+        run: |
+          ng build --configuration=production
+          ls -l dist
 
       - name: Create zip archive
         if: success() && steps.build.outcome == 'success'
