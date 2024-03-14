@@ -15,10 +15,10 @@ jobs:
 
       # Add any necessary setup steps here
 
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '16.x'
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
