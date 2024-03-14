@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16  # or the version you prefer
+          node-version: '18'  # Upgraded to Node.js version 18
 
       # Install Angular CLI
       - name: Install Angular CLI
@@ -33,7 +33,6 @@ jobs:
           mkdir -p ${{ github.workspace }}/publish_zip
           cd ${{ github.workspace }}/dist
           zip -r ${{ github.workspace }}/publish_zip/publish.zip *
-
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
