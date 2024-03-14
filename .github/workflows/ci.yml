@@ -13,40 +13,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
-      - name: Install dependencies
-        run: npm ci
+      # Add any necessary setup steps here
 
       - name: Build Angular project
         run: ng build --configuration=production
 
-      - name: Create and upload zip archive
-        if: success() && steps.build.outcome == 'success'
+      - name: Package
         run: |
-          # Create a zip archive of the 'dist' directory
-          zip -r published-files.zip dist/
-          # Upload the zip archive as an artifact
-          echo "::set-output name=zip_file::published-files.zip"
-        id: create-zip
+          mkdir -p ${{ github.workspace }}/publish_zip
+          cd ${{ github.workspace }}/dist
+          zip -r ${{ github.workspace }}/publish_zip/publish.zip *
 
-      - name: Download zip artifact
-        if: success() && steps.build.outcome == 'success'
-        uses: actions/download-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          name: ${{ steps.create-zip.outputs.zip_file }}  # Use the zip file name set as an output
-          path: ./  # Download the zip file to the current directory
+          name: publish
+          path: ${{ github.workspace }}/publish_zip/publish.zip
