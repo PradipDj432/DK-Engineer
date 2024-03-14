@@ -28,12 +28,12 @@ jobs:
 
       - name: Build Angular project
         run: ng build --configuration=production
-        working-directory: C:\Users\Pradip_Optimum\Desktop\Coding\DK\docs
+        working-directory: ./docs
 
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          cd C:\Users\Pradip_Optimum\Desktop\Coding\DK\docs
+          cd docs
           zip -r ${{ github.workspace }}/publish_zip/publish.zip .
 
       - name: Upload artifact
