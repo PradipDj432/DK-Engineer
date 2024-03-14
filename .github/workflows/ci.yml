@@ -42,10 +42,17 @@ jobs:
           if [ -d "dist" ]; then
             # Create a zip archive of the 'dist' directory
             zip -r published-files.zip dist/
+            ls -l published-files.zip
           else
             echo "Error: 'dist' directory not found. Build might have failed."
             exit 1
           fi
+
+      - name: List artifacts
+        if: always()
+        run: |
+          ls -l
+          ls -l published-files.zip
 
       - name: Upload zip archive
         if: success() && steps.build.outcome == 'success'
