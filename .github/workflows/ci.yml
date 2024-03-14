@@ -5,7 +5,6 @@ on:
     branches:
       - main  # You can specify the branch you want to trigger the workflow on
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,11 +18,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular projecty
-        run: ng build --prod
+      - name: Build Angular project
+        run: ng build --configuration production
 
       - name: Run tests
         run: ng test
