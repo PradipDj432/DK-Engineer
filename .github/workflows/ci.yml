@@ -40,8 +40,12 @@ jobs:
           name: publish
           path: ${{ github.workspace }}/publish_zip/publish.zip 
 
+  download:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Download artifact
-        if: success() && steps.build.outcome == 'success'
+        if: always()
         uses: actions/download-artifact@v2
         with:
           name: publish
