@@ -31,13 +31,13 @@ jobs:
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
           # Zip only the docs folder
-          zip -r ${{ github.workspace }}/publish_zip/publish_docs.zip .
+          zip -r ${{ github.workspace }}/publish_zip ./docs
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish_zip/publish_docs.zip
+          path: ${{ github.workspace }}/publish_zip
 
   download:
     runs-on: ubuntu-latest
