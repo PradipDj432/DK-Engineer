@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -35,17 +35,21 @@ jobs:
       - name: Build Angular project
         run: ng build --configuration=production
 
-      #- name: Run tests
-      #  run: npm test
-
-      - name: Download published files
+      - name: Create zip archive
         if: success() && steps.build.outcome == 'success'
         run: |
           # Check if the 'dist' directory exists
           if [ -d "dist" ]; then
-            # Download 'dist' directory to the current directory
-            cp -r dist/* ./
+            # Create a zip archive of the 'dist' directory
+            zip -r published-files.zip dist/
           else
             echo "Error: 'dist' directory not found. Build might have failed."
             exit 1
           fi
+
+      - name: Upload zip archive
+        if: success() && steps.build.outcome == 'success'
+        uses: actions/upload-artifact@v2
+        with:
+          name: published-files
+          path: published-files.zip
