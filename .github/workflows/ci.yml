@@ -27,27 +27,16 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: ng build --configuration=production
-
-      - name: Package
         run: |
+          ng build --configuration=production
           mkdir -p ${{ github.workspace }}/publish_zip
-          # Search for the dist directory recursively starting from the root directory
-          cd ${{ github.workspace }}
-          dist_dir=$(find . -type d -name "dist" | head -n 1)
-          if [ -n "$dist_dir" ]; then
-            cd $dist_dir
-            zip -r ${{ github.workspace }}/publish_zip/publish.zip .
-          else
-            echo "Error: 'dist' directory not found."
-            exit 1
-          fi
+          cp -R ./docs/dist/* ${{ github.workspace }}/publish_zip/  # Copy build artifacts to publish_zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: publish
-          path: ${{ github.workspace }}/publish_zip/publish.zip 
+          path: ${{ github.workspace }}/publish_zip
 
       - name: Download artifact
         if: success() && steps.build.outcome == 'success'
