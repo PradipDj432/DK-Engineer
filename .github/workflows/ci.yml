@@ -32,8 +32,16 @@ jobs:
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          cd ${{ github.workspace }}/dist
-          zip -r ${{ github.workspace }}/publish_zip/publish.zip .
+          # Search for the dist directory recursively starting from the root directory
+          cd ${{ github.workspace }}
+          dist_dir=$(find . -type d -name "dist" | head -n 1)
+          if [ -n "$dist_dir" ]; then
+            cd $dist_dir
+            zip -r ${{ github.workspace }}/publish_zip/publish.zip .
+          else
+            echo "Error: 'dist' directory not found."
+            exit 1
+          fi
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
