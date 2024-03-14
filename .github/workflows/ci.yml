@@ -32,7 +32,8 @@ jobs:
       - name: Package
         run: |
           mkdir -p ${{ github.workspace }}/publish_zip
-          zip -r ${{ github.workspace }}/publish_zip/publish.zip .
+          # Exclude unnecessary files or directories from the zip
+          zip -r ${{ github.workspace }}/publish_zip/publish.zip . -x "*.git*" -x "*.github*" -x "*.DS_Store" -x "*.gitignore" -x "*.npm*" -x "*.yarn*" -x "*.lock" -x "*.md" -x "*.log" -x "*.map" -x "*.txt"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
