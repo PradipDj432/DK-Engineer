@@ -1,0 +1,23 @@
+
+@import "../../../assets/scss/main.scss";
+
+.services-section {
+    padding: 150px 0;
+    background-image: url(../../../assets/images/MRN-login-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+div
+{
+    //background-color: cornflowerblue;
+   text-align: center;
+   div
+   {
+    margin-top: 112px !important;
+    h1,h3{
+       color: #ffffff;
+    };
+   }
+}
+
+}
