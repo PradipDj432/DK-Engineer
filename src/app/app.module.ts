@@ -20,6 +20,7 @@ import { MrnRegistrationComponent } from './component/mrn-registration/mrn-regis
 import { ShipperPageComponent } from './component/shipper-page/shipper-page.component';
 import { ComonComponentComponent } from './component/comon-component/comon-component.component';
 import { ProductComponent } from './component/product/product.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 @NgModule({
   declarations: [

@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 15px 0;
+    padding: 5px 0;
     transition: all 0.5s !important;
 
     .header-block {
@@ -91,6 +91,16 @@
                     width: 70px;
                 }
             }
+            ul {
+
+            h2{
+                margin: 8px; 
+                //margin-right: 20px;
+                color: white;
+                font-weight: bold;
+               }
+            }
+
             
         }
 
@@ -98,10 +108,11 @@
             transition: all 0.5s !important;
             display: flex;
             align-items: center;
-            h3{
+            h2{
                 margin-top: 20px;
                 margin-right: 20px;
                 color: white;
+                font-weight: bold;
                }
             img {
                 width: 110px;

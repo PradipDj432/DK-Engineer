@@ -25,18 +25,18 @@ export class LoginSectionComponentComponent {
   }
   
   slickInit(_e: any) {
-    console.log('slick initialized');
+    //console.log('slick initialized');
   }
   
   breakpoint(_e: any) {
-    console.log('breakpoint');
+    //console.log('breakpoint');
   }
   
   afterChange(_e: any) {
-    console.log('afterChange');
+    //console.log('afterChange');
   }
   
   beforeChange(_e: any) {
-    console.log('beforeChange');
+    //console.log('beforeChange');
   }
 }

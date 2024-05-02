@@ -10,6 +10,7 @@ import { MrnRegistrationComponent } from './component/mrn-registration/mrn-regis
 import { ServicesComponent } from './component/services/services.component';
 import { ProductComponent } from './component/product/product.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
@@ -32,7 +33,8 @@ const routes: Routes = [
     {path:"forgot_password",component:ForgotPassowrdComponent},
     {path:"mrn_registration",component:MrnRegistrationComponent},
   ]},
-
+  { path: 'not-found', component: NotFoundComponent }, // Define the "not-found" route
+  { path: '**', redirectTo: 'not-found' }
 ];
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'top', // This option ensures the scroll position is reset

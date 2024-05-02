@@ -35,11 +35,27 @@
                 <li>
                     <h4>Send Inquiry</h4>
                     <p>Send us your inquiry to get the latest updates.</p>
+                    <form (ngSubmit)="SendMail()" [formGroup]="SendMailForm">
                     <mat-form-field class="custom-form-field custom-footer-field">
-                        <input matInput placeholder="Enter your message or inquiry">
+                          <input matInput id="email" placeholder="Enter your Email address" formControlName="email">
+                          <mat-error *ngIf="SendMailFormSubmitted && formControls['email']?.errors?.required">
+                            Email is required
+                          </mat-error>
+                          <mat-error *ngIf="SendMailFormSubmitted && formControls['email']?.errors?.email">
+                            Invalid email format
+                          </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="custom-form-field custom-footer-field">
+                          <input matInput id="body" placeholder="Enter your message or inquiry" formControlName="body">
+                          <mat-error *ngIf="SendMailFormSubmitted && formControls['body']?.errors?.required">
+                            Message is required
+                          </mat-error>
                     </mat-form-field>
 
-                    <button mat-button class="btn yellow-btn">SEND</button>
+                        <button mat-button class="btn yellow-btn" type="submit">SEND</button>
+                      </form>
+                      <!-- <a href="mailto:recipient@example.com?subject=Your%20Subject&body=Your%20Message">Send Email</a>
+                      <button (click)="sendEmail2()">Send Email</button> -->
 
                 </li>
             </ul>
@@ -52,9 +68,8 @@
                 <ul>
                     <li><a routerLink="" title="Terms&Condition"> Terms & Condition</a></li>
                     <li><a routerLink="" title="Privacy Policy">Privacy Policy</a> </li>
-
                 </ul>
-                <p>DK Solutions &copy; 2023 All Rights Reserved.</p>
+                <p>DK Solution's &copy; 2024 All Rights Reserved.</p>
             </div>
         </div>
     </div>
