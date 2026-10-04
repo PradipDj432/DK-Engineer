@@ -7,7 +7,7 @@ Where the project stands right now, and a dated log of what was done. Update thi
 |---|---|
 | **Phase** | New static site merged to `main`. Work continues on the `working` branch (D-011). |
 | **Live site** | Will be `https://pradipdj432.github.io/DK-Engineer/` once Pages is on. |
-| **Blocked on** | The owner turning on GitHub Pages. |
+| **Blocked on** | The owner turning on GitHub Pages; the owner confirming the shop address (website and catalogue differ). |
 | **Next step** | Turn on GitHub Pages, then check the live site on a real phone. |
 
 ## Log
@@ -22,3 +22,6 @@ Where the project stands right now, and a dated log of what was done. Update thi
 - The owner confirmed +91 70969 07413 is the main number and is on WhatsApp. Turned on the WhatsApp buttons (D-010, replaces D-006). Checked that the contact page's WhatsApp link, the "Send on WhatsApp" form button and the floating button all open a chat with that number.
 - The owner asked to merge the work into `main`; they will turn on GitHub Pages themselves.
 - Set up the `working` branch from `main` and wrote the branch workflow into `CLAUDE.md` and `README.md` (D-011): every feature goes `working` → pull request → merge to `main` → sync `working` back.
+- The owner shared the printed catalogue (PDF, 5 pages, 2022) to use as the website's catalogue. Rebuilt the products page from it: 14 sections in the catalogue's order, 33 photos taken from the PDF, item lists, materials, brand names as text, and the gasket sheet specifications. Kept the old site's other categories under "Also available". Added "Download catalogue (PDF)" on the products and home pages. Updated the home page banner photos, tiles and Google listing data, and said "Manufacturer & supplier" (D-012, D-013).
+- Found that the catalogue's address (Shop No. 117, Bass Complex, Char Rasta) differs from the website's (Shop No. 08, Arihant Complex). Kept the website's address and asked the owner.
+- Tested at 390px and 1280px: all 35 images on the products page load, no horizontal scrolling, no script errors, every jump link and home tile points to a real section, and the PDF link returns the 1.9 MB PDF.

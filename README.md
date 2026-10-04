@@ -1,6 +1,6 @@
 # DK ENGINEER'S — Website
 
-The website for **DK ENGINEER'S**, an industrial hardware supplier in G.I.D.C. Vapi, Gujarat. It shows what the business supplies and makes it easy for customers to call, email or send an inquiry. There's no online ordering or payment.
+The website for **DK ENGINEER'S**, G.I.D.C. Vapi, Gujarat: manufacturer of hydraulic hose pipes, SS corrugated hoses and rubber products, and supplier of industrial hardware. It shows what the business makes and supplies and makes it easy for customers to call, email or send an inquiry. There's no online ordering or payment.
 
 ## Project docs
 | File | What's in it |
@@ -16,6 +16,7 @@ The website for **DK ENGINEER'S**, an industrial hardware supplier in G.I.D.C. V
 - A static website: plain **HTML, CSS and JavaScript**. No framework and no build step (D-001).
 - Hosted free on **GitHub Pages** from the `main` branch, repo root. The address will be `pradipdj432.github.io/DK-Engineer` (D-003).
 - Page text (products, services, about) is written directly in each `.html` file (D-007).
+- The **products page follows the printed catalogue**, `catalogue/DK-Engineers-Catalogue.pdf`: the same 14 sections, with photos taken from it, and a button to download the PDF (D-012).
 - Contact details (phones, email, address, map, WhatsApp) are in **one file, `js/config.js`**. The header, footer, call buttons and contact page all read from it.
 - The **inquiry form** on the contact page has no server behind it. "Send by email" opens the customer's email app with the message ready to send to the business email; "Send on WhatsApp" opens a WhatsApp chat with the main number (D-010). Clearing `whatsappNumber` in `js/config.js` hides every WhatsApp button.
 - The old Angular website is kept in `angular-app/` for reference. It isn't deployed (D-002).
@@ -26,8 +27,8 @@ All changes are made on the **`working`** branch, one feature at a time: sync `w
 ## Folder layout
 ```
 DK-Engineer/
-├── index.html        Home: intro, product categories, why us, about, call to action
-├── products.html     The 12 product categories and what's in each
+├── index.html        Home: intro, the 14 catalogue sections, why us, about, call to action
+├── products.html     Product catalogue: 14 sections from the PDF, plus "Also available"
 ├── services.html     The services we offer
 ├── about.html        About us, mission, vision, values, team, sustainability
 ├── contact.html      Address, phones, email, inquiry form, map
@@ -38,7 +39,9 @@ DK-Engineer/
 │   ├── config.js     Business details: phones, email, address, map, WhatsApp
 │   ├── common.js     Used on every page: header, menu, footer, contact details
 │   └── contact.js    Contact page: turns the inquiry form into an email / WhatsApp message
-├── images/           Logo and product photos used by the site
+├── images/           Logo and the About page photo
+│   └── catalogue/    Product photos taken from the PDF catalogue
+├── catalogue/        The PDF catalogue customers can download
 └── angular-app/      The old Angular website (archived, not deployed)
 ```
 
@@ -54,6 +57,7 @@ python3 -m http.server 8000
 Then open http://localhost:8000.
 
 ## Edit the website (from the GitHub website or app)
+All changes go through the `working` branch (D-011). On GitHub, pick **`working`** in the branch menu (top left) before you open a file, commit your change there, then open a pull request into `main` and merge it. The steps below assume you're on `working`.
 
 ### Change a phone number, email, address or WhatsApp
 Open `js/config.js` → pencil icon (✏️) → change the value inside the quotes → **Commit changes**. It updates on every page.
@@ -65,21 +69,34 @@ Open `js/config.js` → pencil icon (✏️) → change the value inside the quo
 Open the page (`products.html`, `services.html`, `about.html` or `index.html`) → pencil icon → change the words between the tags. For example, in `<p>Helmets, gloves, goggles, etc.</p>` change only the text between `<p>` and `</p>`. → **Commit changes**.
 
 ### Add an item to a product category
-In `products.html`, find the category and copy one line like this:
+In `products.html`, find the category. Most have a list like this:
 
 ```html
-<div><dt>Valves</dt><dd>Ball valves, gate valves, check valves, butterfly valves, etc.</dd></div>
+<li>Ball valve</li>
 ```
 
-Paste it under the line you copied, then change the name (between `<dt>` and `</dt>`) and the examples (between `<dd>` and `</dd>`).
+Copy one line, paste it under the line you copied, and change the words between `<li>` and `</li>`.
+
+Some categories (pipes, hand tools, "Also available") use a name and examples instead:
+
+```html
+<div><dt>Pipes</dt><dd>ERW and seamless. MS, GI, SS, HDPE, PP, PVC and UPVC.</dd></div>
+```
+
+Change the name between `<dt>` and `</dt>` and the examples between `<dd>` and `</dd>`.
+
+The **Material** and **Brands** lines at the bottom of a category work the same way.
 
 ### Add a new product category
-In `products.html`, copy a whole block from `<li id="...">` to its closing `</li>`. Give it a new `id` (lowercase, no spaces, for example `id="welding"`) and the next number. Then add a link to it:
-- in the short list at the top of `products.html` (`<li><a href="#welding">Welding</a></li>`), and
+In `products.html`, copy a whole block from `<li id="...">` to its closing `</li>`. Give it a new `id` (lowercase, no spaces, for example `id="fasteners"`) and the next number. Then add a link to it:
+- in the short list at the top of `products.html` (`<li><a href="#fasteners">Fasteners</a></li>`), and
 - on the home page (`index.html`, the "What we supply" list).
 
 ### Add or change a photo
-Upload the photo to the `images/` folder (**Add file → Upload files**). Keep it under about 300 KB so the site stays fast on phones. Then change the `src="images/…"` in the page to the new file name, and the `alt="…"` text to describe the photo.
+Upload the photo to `images/catalogue/` (**Add file → Upload files**). Keep it under about 300 KB so the site stays fast on phones. Then change the `src="images/catalogue/…"` in the page to the new file name, the `width` and `height` to the photo's size in pixels, and the `alt="…"` text to describe the photo.
+
+### Replace the PDF catalogue
+Upload the new PDF to the `catalogue/` folder with the **same name**, `DK-Engineers-Catalogue.pdf`, so the download buttons keep working. If its size changes a lot, update "(PDF, 1.9 MB)" on the products page. Then update the products page to match the new catalogue (CLAUDE.md rule).
 
 The live site updates about a minute after each commit to `main`.
 

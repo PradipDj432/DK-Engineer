@@ -93,3 +93,19 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 - **Decision:** Work only on the `working` branch. For each feature: sync `working` with `main`, build, open a pull request from `working` into `main`, merge it, then fast-forward `working` to `main` again. Steps are in `CLAUDE.md`.
 - **Alternatives considered:** A new branch per feature (more branches to keep track of); committing straight to `main` (no review step, and every mistake goes live).
 - **Consequences:** `main` is always what's live on GitHub Pages. One feature per pull request keeps each change easy to check and undo. An older `working` branch already existed on GitHub with no commits that weren't in `main`; it was moved forward to `main`.
+
+## D-012 — The products page follows the printed PDF catalogue
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** The owner shared the business's printed catalogue (5 pages, 2022) and asked to use it as the website's catalogue. It lists 14 product sections, with photos, materials and brands, and says DK ENGINEER'S manufactures hydraulic hose pipes, SS corrugated hoses and rubber products. The old site's 12 product categories were generic and didn't match it.
+- **Decision:** Rebuild the products page and the home page tiles from the catalogue's 14 sections, in the same order, with photos taken from the PDF (`images/catalogue/`), the materials (MOC) and the gasket sheet specifications. Mark the manufactured products. Add "Download catalogue (PDF)" buttons on the products and home pages (`catalogue/DK-Engineers-Catalogue.pdf`). Keep the old site's categories that aren't in the catalogue in an "Also available" section until the owner decides. Show "Manufacturer & supplier" on the home page. This replaces the product list from D-004; the services and about text stay as D-004 says.
+- **Alternatives considered:** Only link the PDF and keep the old categories; drop the old categories that aren't in the catalogue.
+- **Consequences:** The products page now matches what the business actually sells. Obvious typos in the catalogue were corrected on the site (for example "Manyfold" → "Manifold", "Quik" → "Quick", "Cutt of wheel" → "Cut-off wheel", "Hyplon" → "Hypalon", "O-ring code" → "O-ring cord", "Grade 0/1" → "Grade O/1"). The photos are small (about 200–700 px wide), so they should be replaced with the business's own photos over time. The PDF shows a different shop address from the website; this needs the owner's answer.
+
+## D-013 — Brand names as text, logos still off
+- **Date:** 2026-10-04
+- **Status:** Proposed
+- **Context:** The catalogue shows the logos of the brands the business deals in. D-009 says not to show logos until the owner confirms it's allowed.
+- **Decision:** List the brand names as plain text under each product section and on the products page header, taken from the catalogue. Don't show logo images yet. D-009 still applies to logos.
+- **Alternatives considered:** Show the logos as in the catalogue; leave brands out entirely.
+- **Consequences:** Customers can see the brands, and searches for a brand name can find the page. Logos can be added once the owner confirms.
