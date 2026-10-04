@@ -109,3 +109,11 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 - **Decision:** List the brand names as plain text under each product section and on the products page header, taken from the catalogue. Don't show logo images yet. D-009 still applies to logos.
 - **Alternatives considered:** Show the logos as in the catalogue; leave brands out entirely.
 - **Consequences:** Customers can see the brands, and searches for a brand name can find the page. Logos can be added once the owner confirms.
+
+## D-014 — Shop address: Shop No. 117, Bass Complex, Char Rasta
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** The original website showed Shop No. 08, Arihant Complex, Nr. Vishal Mega Mart, G.I.D.C. The printed catalogue shows Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta. The owner confirmed the catalogue's address is the current one, and that the Google Maps pin for "DK ENGINEER'S" is already at it.
+- **Decision:** Show Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi - 396195, Gujarat everywhere (set in `js/config.js`). Keep the existing Google Maps link and map.
+- **Alternatives considered:** Keep the old Arihant Complex address; point the map to a search for the new address.
+- **Consequences:** The website and the downloadable catalogue now show the same address. The contact page's search description was updated too.

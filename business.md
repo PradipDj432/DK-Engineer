@@ -48,8 +48,9 @@ The website is for information and inquiries only. It has no cart, login or onli
 |---|---|
 | Phone | +91 70969 07413 (main), +91 88498 61164 |
 | Email | dkengineers6@gmail.com |
-| Address | Shop No. 08, Arihant Complex, Nr. Vishal Mega Mart, G.I.D.C., Vapi - 396195, Gujarat (from the original website; the 2022 catalogue shows a different address, see below) |
-| Google Maps | Listed as "DK ENGINEER'S" (link in `js/config.js`) |
+| Address | Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi - 396195, Gujarat (confirmed by the owner; same as the catalogue; D-014) |
+| Old address | Shop No. 08, Arihant Complex, Nr. Vishal Mega Mart, G.I.D.C., Vapi (on the original website; no longer used) |
+| Google Maps | Listed as "DK ENGINEER'S" (link in `js/config.js`). The owner confirmed the pin is at the current address |
 | WhatsApp | +91 70969 07413 (the main number; D-010) |
 | Social media | None known |
 | Website | `pradipdj432.github.io/DK-Engineer` (not live yet) |
@@ -57,7 +58,6 @@ The website is for information and inquiries only. It has no cart, login or onli
 ## Still to confirm
 Tracked in `backlog.md`. Don't put these on the website until the owner confirms them.
 
-- **Address:** the 2022 catalogue says *Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi - 396195*. The original website (and the site now) says *Shop No. 08, Arihant Complex, Nr. Vishal Mega Mart, G.I.D.C.* Which is current? If the catalogue's address is old, the downloadable PDF should be updated.
 - **Brand logos:** the catalogue shows brand logos. The website lists brand names as text only until the owner confirms logos may be shown (D-009, D-013).
 - **"Also available" list:** keep, change or remove the original website's categories that aren't in the catalogue.
 - **Business hours** and days open.

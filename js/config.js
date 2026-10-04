@@ -19,7 +19,7 @@ const BUSINESS = {
   whatsappNumber: "917096907413",
 
   address: {
-    lines: ["Shop No. 08, Arihant Complex", "Nr. Vishal Mega Mart, G.I.D.C."],
+    lines: ["Shop No. 117, 1st Floor, Bass Complex", "G.I.D.C., Char Rasta"],
     city: "Vapi",
     pin: "396195",
     state: "Gujarat",
