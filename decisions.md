@@ -85,3 +85,11 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 - **Decision:** Set `whatsappNumber` to `917096907413` in `js/config.js`. Inquiries come in by phone, WhatsApp, email, or the contact form, which can send either by email or on WhatsApp. On phones the floating button opens WhatsApp instead of calling. Replaces D-006.
 - **Alternatives considered:** Keep WhatsApp off (D-006); use +91 88498 61164.
 - **Consequences:** The WhatsApp link format is `https://wa.me/917096907413?text=...`. If the number changes, update it in `js/config.js` and `business.md`.
+
+## D-011 — All work on one `working` branch, merged to `main` by pull request
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** The owner wants one predictable way to add features: a single branch to work on, and every change reviewed as a pull request before it reaches the live site.
+- **Decision:** Work only on the `working` branch. For each feature: sync `working` with `main`, build, open a pull request from `working` into `main`, merge it, then fast-forward `working` to `main` again. Steps are in `CLAUDE.md`.
+- **Alternatives considered:** A new branch per feature (more branches to keep track of); committing straight to `main` (no review step, and every mistake goes live).
+- **Consequences:** `main` is always what's live on GitHub Pages. One feature per pull request keeps each change easy to check and undo. An older `working` branch already existed on GitHub with no commits that weren't in `main`; it was moved forward to `main`.

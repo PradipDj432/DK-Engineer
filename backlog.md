@@ -30,6 +30,7 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 - [x] **P1 · Dev** Turn on WhatsApp with the main number (D-010).
 - [x] **P1 · Dev** Business details for Google (schema.org `HardwareStore` data on the home page).
 - [x] **P1 · Dev** README guide for the owner: how to edit text, contact details, products and photos.
+- [x] **P1 · Dev** `working` branch and pull-request workflow written into the rules (D-011).
 - [ ] **P1 · Dev** After merge: check the live site on a real phone (call button, menu, form, map).
 
 ## Build — after launch

@@ -20,6 +20,9 @@ The website for **DK ENGINEER'S**, an industrial hardware supplier in G.I.D.C. V
 - The **inquiry form** on the contact page has no server behind it. "Send by email" opens the customer's email app with the message ready to send to the business email; "Send on WhatsApp" opens a WhatsApp chat with the main number (D-010). Clearing `whatsappNumber` in `js/config.js` hides every WhatsApp button.
 - The old Angular website is kept in `angular-app/` for reference. It isn't deployed (D-002).
 
+## How we work (branches)
+All changes are made on the **`working`** branch, one feature at a time: sync `working` with `main` → build the feature → open a pull request from `working` into `main` → merge it → sync `working` with `main` again. The exact steps are in `CLAUDE.md` → "Branches and pull requests" (D-011).
+
 ## Folder layout
 ```
 DK-Engineer/
