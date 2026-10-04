@@ -13,7 +13,7 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 - [ ] **P2 · Owner** Business hours and days open.
 - [ ] **P2 · Owner** Real photos of the shop, stock and own products (the site uses small photos from the catalogue).
 - [x] **P2 · Owner** Brands sold: listed in the catalogue (D-012, D-013).
-- [ ] **P1 · Owner** Address: is the shop at Shop No. 08, Arihant Complex (website) or Shop No. 117, Bass Complex, Char Rasta (2022 catalogue)? If the catalogue's address is old, send an updated PDF.
+- [x] **P1 · Owner** Address: Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta (the catalogue's address); the Google Maps pin is already correct (D-014).
 - [ ] **P2 · Owner** May brand logos be shown, as in the catalogue? (D-009, D-013)
 - [ ] **P2 · Owner** "Also available" section on the products page: keep, change or remove the old site's categories that aren't in the catalogue.
 - [ ] **P2 · Owner** Delivery area, delivery charge, minimum order, payment terms.
@@ -43,7 +43,8 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 - [ ] **P2 · Dev** Add business hours to the contact page and footer.
 - [x] **P2 · Dev** A photo for each product category (from the PDF catalogue).
 - [ ] **P2 · Dev** Replace the catalogue photos with the business's own photos when the owner sends them.
-- [ ] **P2 · Dev** Update the site if the owner sends a new catalogue or confirms a different address.
+- [x] **P1 · Dev** Change the website address to Shop No. 117, Bass Complex, Char Rasta (D-014).
+- [ ] **P2 · Dev** Update the site if the owner sends a new catalogue.
 - [ ] **P2 · Dev** Share preview image (`og:image`) so links look good on WhatsApp. Needs the final address, because it must be a full URL.
 - [ ] **P2 · Dev** Link the website from the Google Maps / Google Business Profile listing.
 - [ ] **P2 · Dev** `sitemap.xml` and `robots.txt` once the final address is decided.

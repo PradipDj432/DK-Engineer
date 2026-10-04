@@ -7,7 +7,7 @@ Where the project stands right now, and a dated log of what was done. Update thi
 |---|---|
 | **Phase** | New static site merged to `main`. Work continues on the `working` branch (D-011). |
 | **Live site** | Will be `https://pradipdj432.github.io/DK-Engineer/` once Pages is on. |
-| **Blocked on** | The owner turning on GitHub Pages; the owner confirming the shop address (website and catalogue differ). |
+| **Blocked on** | The owner turning on GitHub Pages. |
 | **Next step** | Turn on GitHub Pages, then check the live site on a real phone. |
 
 ## Log
@@ -25,3 +25,4 @@ Where the project stands right now, and a dated log of what was done. Update thi
 - The owner shared the printed catalogue (PDF, 5 pages, 2022) to use as the website's catalogue. Rebuilt the products page from it: 14 sections in the catalogue's order, 33 photos taken from the PDF, item lists, materials, brand names as text, and the gasket sheet specifications. Kept the old site's other categories under "Also available". Added "Download catalogue (PDF)" on the products and home pages. Updated the home page banner photos, tiles and Google listing data, and said "Manufacturer & supplier" (D-012, D-013).
 - Found that the catalogue's address (Shop No. 117, Bass Complex, Char Rasta) differs from the website's (Shop No. 08, Arihant Complex). Kept the website's address and asked the owner.
 - Tested at 390px and 1280px: all 35 images on the products page load, no horizontal scrolling, no script errors, every jump link and home tile points to a real section, and the PDF link returns the 1.9 MB PDF.
+- The owner confirmed the current address is the catalogue's: Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi, and that the Google Maps pin is already there. Changed it in `js/config.js` (header, footer, contact page, Google listing data) and in the contact page's search description (D-014).
