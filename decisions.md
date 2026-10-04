@@ -48,7 +48,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-006 — Inquiries by phone, email and an email-based form; WhatsApp ready but off
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Replaced by D-010
 - **Context:** The old "Send Inquiry" form sent nothing. A static site has no server to send email.
 - **Decision:** "Call now" buttons on every page and a floating call button on phones. The contact page form builds the message and opens the customer's own email app, addressed to `dkengineers6@gmail.com`. A "Send on WhatsApp" button and WhatsApp links appear automatically once `whatsappNumber` is set in `js/config.js`.
 - **Alternatives considered:** A free form service such as Web3Forms or Formspree (sends from the website itself, but needs an account and an access key); WhatsApp only (number not confirmed).
@@ -77,3 +77,11 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 - **Decision:** Don't show brand logos on the site for now.
 - **Alternatives considered:** Add a "Brands we deal in" section with the existing logo files.
 - **Consequences:** Listed in `backlog.md`. Once the owner confirms which brands to show and that it's allowed, add a brands section.
+
+## D-010 — WhatsApp on, using the main number +91 70969 07413
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** The owner confirmed that +91 70969 07413 is the main number and is on WhatsApp.
+- **Decision:** Set `whatsappNumber` to `917096907413` in `js/config.js`. Inquiries come in by phone, WhatsApp, email, or the contact form, which can send either by email or on WhatsApp. On phones the floating button opens WhatsApp instead of calling. Replaces D-006.
+- **Alternatives considered:** Keep WhatsApp off (D-006); use +91 88498 61164.
+- **Consequences:** The WhatsApp link format is `https://wa.me/917096907413?text=...`. If the number changes, update it in `js/config.js` and `business.md`.

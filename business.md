@@ -30,24 +30,23 @@ Industrial hardware supply, a diverse product range, personalised solutions, qua
 The website is for information and inquiries only. It has no cart, login or online payment.
 
 1. The customer finds the products or services they need on the website.
-2. They **call**, **email**, or fill in the **inquiry form** on the contact page (which opens their email app with the message ready).
+2. They **call**, **message on WhatsApp**, **email**, or fill in the **inquiry form** on the contact page (which opens their email app or WhatsApp with the message ready).
 3. DK ENGINEER'S replies with availability and a price.
 
 ## Contact
 | Channel | Detail |
 |---|---|
-| Phone | +91 70969 07413, +91 88498 61164 |
+| Phone | +91 70969 07413 (main), +91 88498 61164 |
 | Email | dkengineers6@gmail.com |
 | Address | Shop No. 08, Arihant Complex, Nr. Vishal Mega Mart, G.I.D.C., Vapi - 396195, Gujarat |
 | Google Maps | Listed as "DK ENGINEER'S" (link in `js/config.js`) |
-| WhatsApp | Not confirmed yet |
+| WhatsApp | +91 70969 07413 (the main number; D-010) |
 | Social media | None known |
 | Website | `pradipdj432.github.io/DK-Engineer` (not live yet) |
 
 ## Still to confirm
 Tracked in `backlog.md`. Don't put these on the website until the owner confirms them.
 
-- **WhatsApp:** is either phone number on WhatsApp? If yes, which one should receive inquiries?
 - **Business hours** and days open.
 - **Brands:** which brands are sold, and may their logos be shown? The old site had Astral, Polyhose and L&T Valves logos in its files but never showed them.
 - **Delivery:** which areas are served, and is there a delivery charge or minimum order?

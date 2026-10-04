@@ -16,7 +16,7 @@ const BUSINESS = {
 
   // WhatsApp number: country code + number, no "+" or spaces, for example "917096907413".
   // Leave it empty ("") to hide all WhatsApp buttons.
-  whatsappNumber: "",
+  whatsappNumber: "917096907413",
 
   address: {
     lines: ["Shop No. 08, Arihant Complex", "Nr. Vishal Mega Mart, G.I.D.C."],

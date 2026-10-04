@@ -17,7 +17,7 @@ The website for **DK ENGINEER'S**, an industrial hardware supplier in G.I.D.C. V
 - Hosted free on **GitHub Pages** from the `main` branch, repo root. The address will be `pradipdj432.github.io/DK-Engineer` (D-003).
 - Page text (products, services, about) is written directly in each `.html` file (D-007).
 - Contact details (phones, email, address, map, WhatsApp) are in **one file, `js/config.js`**. The header, footer, call buttons and contact page all read from it.
-- The **inquiry form** on the contact page has no server behind it. "Send by email" opens the customer's email app with the message ready to send to the business email (D-006). A "Send on WhatsApp" button appears once a WhatsApp number is set in `js/config.js`.
+- The **inquiry form** on the contact page has no server behind it. "Send by email" opens the customer's email app with the message ready to send to the business email; "Send on WhatsApp" opens a WhatsApp chat with the main number (D-010). Clearing `whatsappNumber` in `js/config.js` hides every WhatsApp button.
 - The old Angular website is kept in `angular-app/` for reference. It isn't deployed (D-002).
 
 ## Folder layout
