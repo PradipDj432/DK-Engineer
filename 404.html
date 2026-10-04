@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | DK ENGINEER'S</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#12153f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+  <!-- GitHub Pages shows this page for any wrong address, at any depth (for example /DK-Engineer/a/b/c).
+       This script sets the site's base folder first, then loads the site's own files from there,
+       so the styles, scripts and links still work. -->
+  <script>
+    (function () {
+      var root = "/";
+      if (location.hostname.endsWith(".github.io")) {
+        var repo = location.pathname.split("/")[1];
+        if (repo) root = "/" + repo + "/";
+      }
+      document.write(
+        '<base href="' + root + '">' +
+        '<link rel="icon" href="images/logo.png" type="image/png">' +
+        '<link rel="stylesheet" href="css/style.css">' +
+        '<script src="js/config.js"><\/script>' +
+        '<script src="js/common.js"><\/script>'
+      );
+    })();
+  </script>
+</head>
+<body data-page="not-found">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="not-found">
+      <div class="container">
+        <span class="number">404</span>
+        <h1>Page not found</h1>
+        <p class="lede">The page you are looking for does not exist. It may have moved, or the link may be wrong.</p>
+        <div class="button-row">
+          <a class="button" href="index.html">Go to home page</a>
+          <a class="button button-outline" href="products.html">View products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
