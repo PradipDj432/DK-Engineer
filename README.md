@@ -41,7 +41,9 @@ DK-Engineer/
 │   └── contact.js    Contact page: turns the inquiry form into an email / WhatsApp message
 ├── images/           Logo and the About page photo
 │   └── catalogue/    Product photos taken from the PDF catalogue
-├── catalogue/        The PDF catalogue customers can download
+├── catalogue/        The PDF catalogue (download + backup), see catalogue/README.md
+│   ├── brand-logos/  Brand logos from the catalogue (backup only, not shown on the site)
+│   └── archive/      Older catalogues
 └── angular-app/      The old Angular website (archived, not deployed)
 ```
 
@@ -96,7 +98,7 @@ In `products.html`, copy a whole block from `<li id="...">` to its closing `</li
 Upload the photo to `images/catalogue/` (**Add file → Upload files**). Keep it under about 300 KB so the site stays fast on phones. Then change the `src="images/catalogue/…"` in the page to the new file name, the `width` and `height` to the photo's size in pixels, and the `alt="…"` text to describe the photo.
 
 ### Replace the PDF catalogue
-Upload the new PDF to the `catalogue/` folder with the **same name**, `DK-Engineers-Catalogue.pdf`, so the download buttons keep working. If its size changes a lot, update "(PDF, 1.9 MB)" on the products page. Then update the products page to match the new catalogue (CLAUDE.md rule).
+First move the current PDF into `catalogue/archive/` with its year in the name (for example `DK-Engineers-Catalogue-2022.pdf`), so the old one is kept as a backup. Then upload the new PDF to the `catalogue/` folder with the **same name**, `DK-Engineers-Catalogue.pdf`, so the download buttons keep working. If its size changes a lot, update "(PDF, 1.9 MB)" on the products page. Then update the products page to match the new catalogue (CLAUDE.md rule).
 
 The live site updates about a minute after each commit to `main`.
 
