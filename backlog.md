@@ -6,7 +6,7 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 **Owner:** `Owner` (business owner must provide or decide) · `Dev` (build work)
 
 ## Waiting on the business owner
-- [ ] **P1 · Owner** Review the new site and confirm the `Proposed` decisions in `decisions.md` (D-003, D-005, D-007 to D-009).
+- [ ] **P1 · Owner** Review the new site and confirm the `Proposed` decisions in `decisions.md` (D-003, D-005, D-007, D-008).
 - [x] **P1 · Owner** WhatsApp number: +91 70969 07413, the main number (D-010).
 - [x] **P1 · Owner** Merge to `main`.
 - [ ] **P1 · Owner** Turn on GitHub Pages (steps in `README.md` → Go live).
@@ -14,8 +14,8 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 - [ ] **P2 · Owner** Real photos of the shop, stock and own products (the site uses small photos from the catalogue).
 - [x] **P2 · Owner** Brands sold: listed in the catalogue (D-012, D-013).
 - [x] **P1 · Owner** Address: Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta (the catalogue's address); the Google Maps pin is already correct (D-014).
-- [ ] **P2 · Owner** May brand logos be shown, as in the catalogue? (D-009, D-013)
-- [ ] **P2 · Owner** "Also available" section on the products page: keep, change or remove the old site's categories that aren't in the catalogue.
+- [x] **P2 · Owner** Brand logos: not shown on the website; keep them in the repo as a backup (D-015).
+- [x] **P2 · Owner** "Also available" section: keep it (D-016).
 - [ ] **P2 · Owner** Delivery area, delivery charge, minimum order, payment terms.
 - [ ] **P3 · Owner** Social media accounts, if any.
 - [ ] **P3 · Owner** Decide on a custom domain (for example `dkengineers.in`).
@@ -48,7 +48,7 @@ Everything still to do, newest ideas at the bottom of each section. When work st
 - [ ] **P2 · Dev** Share preview image (`og:image`) so links look good on WhatsApp. Needs the final address, because it must be a full URL.
 - [ ] **P2 · Dev** Link the website from the Google Maps / Google Business Profile listing.
 - [ ] **P2 · Dev** `sitemap.xml` and `robots.txt` once the final address is decided.
-- [ ] **P3 · Dev** Brand logos, if the owner confirms (D-009, D-013).
+- [x] **P2 · Dev** Save the brand logos from the catalogue in `catalogue/brand-logos/` (backup only, not shown) and document the catalogue backup in `catalogue/README.md` (D-015).
 - [ ] **P3 · Dev** Optional form service (Web3Forms) so inquiries send from the website itself (D-006).
 - [ ] **P3 · Dev** Connect a custom domain once bought.
 - [ ] **P3 · Dev** Delete `angular-app/` once the owner confirms.

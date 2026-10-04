@@ -72,7 +72,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-009 — No brand or partner logos until the owner confirms
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Accepted
 - **Context:** The old project had Astral, Polyhose and L&T Valves logo files but never showed them. Showing a brand's logo can suggest an official dealership.
 - **Decision:** Don't show brand logos on the site for now.
 - **Alternatives considered:** Add a "Brands we deal in" section with the existing logo files.
@@ -104,7 +104,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-013 — Brand names as text, logos still off
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Accepted
 - **Context:** The catalogue shows the logos of the brands the business deals in. D-009 says not to show logos until the owner confirms it's allowed.
 - **Decision:** List the brand names as plain text under each product section and on the products page header, taken from the catalogue. Don't show logo images yet. D-009 still applies to logos.
 - **Alternatives considered:** Show the logos as in the catalogue; leave brands out entirely.
@@ -117,3 +117,19 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 - **Decision:** Show Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi - 396195, Gujarat everywhere (set in `js/config.js`). Keep the existing Google Maps link and map.
 - **Alternatives considered:** Keep the old Arihant Complex address; point the map to a search for the new address.
 - **Consequences:** The website and the downloadable catalogue now show the same address. The contact page's search description was updated too.
+
+## D-015 — Brand logos kept in the repo as a backup, not shown on the website
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** Asked whether to show the brand logos as the catalogue does, the owner said to keep the website as it is (brand names as text, no logos), but to save the logos in the repo. The owner also asked to keep the catalogue in the repo as a backup.
+- **Decision:** Cut the 41 brand logos out of the PDF (300 dpi PNG) into `catalogue/brand-logos/`. Don't use them on any page. Keep the original PDF unchanged in `catalogue/` with its SHA-256 in `catalogue/README.md`; when a newer catalogue arrives, move the old one into `catalogue/archive/` instead of overwriting it. Confirms D-009 and D-013.
+- **Alternatives considered:** Show the logos on the products page; leave them out of the repo.
+- **Consequences:** The logos are ready if the owner ever wants them on the site. GitHub Pages serves every file in the repo, so the logo files can be opened by their exact address, but no page links to them.
+
+## D-016 — Keep the "Also available" section
+- **Date:** 2026-10-04
+- **Status:** Accepted
+- **Context:** D-012 kept the original website's categories that aren't in the printed catalogue in an "Also available" section until the owner decided.
+- **Decision:** The owner chose to keep it as it is.
+- **Alternatives considered:** Remove it; trim it to fewer categories.
+- **Consequences:** `business.md` keeps listing these categories as part of what the business sells.

@@ -31,7 +31,9 @@ From the printed catalogue (14 sections). The website's products page shows the 
 
 Brands on the catalogue cover: Polyhose, Champion, Diamond, Unbrako, Bosch, Karam, Raaj, L&T Valves.
 
-**Also available** (from the original website, not in the printed catalogue): fasteners and hardware, safety equipment, electrical, plumbing supplies, HVAC, materials (steel, aluminium, plastics, lubricants), maintenance and repair supplies, custom and specialty solutions.
+The website lists brand names as text only. The owner decided not to show brand logos on the website; the logos are kept in `catalogue/brand-logos/` as a backup (D-015).
+
+**Also available** (from the original website, not in the printed catalogue; the owner chose to keep these, D-016): fasteners and hardware, safety equipment, electrical, plumbing supplies, HVAC, materials (steel, aluminium, plastics, lubricants), maintenance and repair supplies, custom and specialty solutions.
 
 ## Services (as described on the original site)
 Industrial hardware supply, a diverse product range, personalised solutions, quality assurance, timely delivery, customer service, competitive pricing, sustainability initiatives, and long-term partnership.
@@ -58,8 +60,6 @@ The website is for information and inquiries only. It has no cart, login or onli
 ## Still to confirm
 Tracked in `backlog.md`. Don't put these on the website until the owner confirms them.
 
-- **Brand logos:** the catalogue shows brand logos. The website lists brand names as text only until the owner confirms logos may be shown (D-009, D-013).
-- **"Also available" list:** keep, change or remove the original website's categories that aren't in the catalogue.
 - **Business hours** and days open.
 - **Delivery:** which areas are served, and is there a delivery charge or minimum order?
 - **Payment terms:** cash, UPI, bank transfer, credit for regular customers?
