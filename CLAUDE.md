@@ -17,9 +17,9 @@ Never commit straight to `main`, and don't create other feature branches unless 
 ## Keep the docs up to date
 | When you… | Update |
 |---|---|
-| Finish any piece of work | `progress.md`: add a line under today's date and refresh "Current status" |
-| Start or finish a backlog item | `backlog.md`: tick it when done; add new work you discover |
-| Make a choice between options (tech, design, business rule) | `decisions.md`: add a new numbered entry. Never edit an old decision's meaning; replace it with a new one |
+| Finish any piece of work | `progress.md`: add a line under today's date (with the pull request number), add the pull request to the "Pull requests" table, and refresh "Current status" and "Where we are" |
+| Start or finish a backlog item | `backlog.md`: when done, tick it and move it to "Done" with its pull request number; add new work you discover; keep "Next up" short and current |
+| Make a choice between options (tech, design, business rule) | `decisions.md`: add a new numbered entry and a row in its index. Never edit an old decision's meaning; replace it with a new one |
 | Learn a business fact (contact detail, product range, delivery or payment rule) | `business.md` |
 | Change how the code is laid out, run or deployed | `README.md` |
 

@@ -11,10 +11,15 @@ The website for **DK ENGINEER'S**, G.I.D.C. Vapi, Gujarat: manufacturer of hydra
 | `backlog.md` | Everything still to do, with priority |
 | `progress.md` | Current status and a dated work log |
 | `CLAUDE.md` | Rules for keeping these docs and the code up to date |
+| `catalogue/README.md` | The catalogue backup: the PDF, brand logos, and what to do when a new catalogue arrives |
+| `angular-app/README.md` | Note on the old Angular website (archived) |
+
+## Status
+**Live** at https://pradipdj432.github.io/DK-Engineer/, published from `main` by GitHub Pages. Where the project stands and what was done: `progress.md`. What's next: `backlog.md` → "Next up".
 
 ## How it works
 - A static website: plain **HTML, CSS and JavaScript**. No framework and no build step (D-001).
-- Hosted free on **GitHub Pages** from the `main` branch, repo root. The address will be `pradipdj432.github.io/DK-Engineer` (D-003).
+- Hosted free on **GitHub Pages** from the `main` branch, repo root, at `https://pradipdj432.github.io/DK-Engineer/` (D-003).
 - Page text (products, services, about) is written directly in each `.html` file (D-007).
 - The **products page follows the printed catalogue**, `catalogue/DK-Engineers-Catalogue.pdf`: the same 14 sections, with photos taken from it, and a button to download the PDF (D-012).
 - Contact details (phones, email, address, map, WhatsApp) are in **one file, `js/config.js`**. The header, footer, call buttons and contact page all read from it.
@@ -102,16 +107,10 @@ First move the current PDF into `catalogue/archive/` with its year in the name (
 
 The live site updates about a minute after each commit to `main`.
 
-## Go live (GitHub Pages)
-GitHub Pages serves the `main` branch from the repo root. Turn it on once:
+## Hosting (GitHub Pages)
+GitHub Pages is **on**: Settings → Pages → "Deploy from a branch", branch **`main`**, folder **`/ (root)`**. Every merge into `main` is published in about a minute. To check a deploy, open the repo's **Actions** tab and look for the latest **"pages build and deployment"** run (green tick = live).
 
-1. Merge this work into `main`.
-2. Open the repo on GitHub → **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Pick branch **`main`** and folder **`/ (root)`** → **Save**.
-5. After a minute or two the site is live at `https://pradipdj432.github.io/DK-Engineer/`.
-
-After that, every change on `main` goes live automatically.
+If Pages is ever switched off, turn it back on with the same settings: Settings → Pages → **Deploy from a branch** → `main` → `/ (root)` → **Save**.
 
 ### Adding a custom domain later
 Settings → Pages → **Custom domain**, then follow GitHub's DNS steps. Nothing in the site's code needs to change: all links are relative, and `404.html` works out its own base folder.
