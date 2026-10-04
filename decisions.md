@@ -4,6 +4,28 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 **Status values:** `Accepted` (owner agreed) · `Proposed` (suggested, not confirmed by the owner yet) · `Replaced by D-xxx`
 
+## Index
+| # | Decision | Status |
+|---|---|---|
+| D-001 | Rebuild as a plain HTML/CSS/JavaScript site with no build step | Accepted |
+| D-002 | Keep the old Angular app in `angular-app/`, archived | Accepted |
+| D-003 | Host on GitHub Pages from `main`, repo root, on the free address | Accepted |
+| D-004 | Same content as the old site, with light edits | Accepted (product list replaced by D-012) |
+| D-005 | Remove the unused parts of the old site | Accepted |
+| D-006 | Inquiries by phone, email and an email-based form; WhatsApp ready but off | Replaced by D-010 |
+| D-007 | Page text in the HTML pages; contact details in `js/config.js` | Proposed |
+| D-008 | Colours from the logo: navy blue and red | Accepted |
+| D-009 | No brand or partner logos until the owner confirms | Accepted |
+| D-010 | WhatsApp on, using the main number +91 70969 07413 | Accepted |
+| D-011 | All work on one `working` branch, merged to `main` by pull request | Accepted |
+| D-012 | The products page follows the printed PDF catalogue | Accepted |
+| D-013 | Brand names as text, logos still off | Accepted |
+| D-014 | Shop address: Shop No. 117, Bass Complex, Char Rasta | Accepted |
+| D-015 | Brand logos kept in the repo as a backup, not shown on the website | Accepted |
+| D-016 | Keep the "Also available" section | Accepted |
+
+When you add a decision, add a row here too.
+
 ---
 
 ## D-001 — Rebuild as a plain HTML/CSS/JavaScript site with no build step
@@ -24,7 +46,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-003 — Host on GitHub Pages from `main`, repo root, on the free address
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Accepted
 - **Context:** The site should go live at no cost and update on every commit, without a deploy workflow to maintain.
 - **Decision:** GitHub Pages, "Deploy from a branch", `main`, `/ (root)`. Address: `pradipdj432.github.io/DK-Engineer`. A custom domain can be added later.
 - **Alternatives considered:** Serve from `/docs` (would split the site from its docs); deploy with a GitHub Actions workflow (more to maintain, and the old one was broken).
@@ -40,7 +62,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-005 — Remove the unused parts of the old site
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Accepted
 - **Context:** The old site contained leftovers from an earlier shipping-document project and links that went nowhere.
 - **Decision:** Leave out the Shipper/MRN login, registration and forgot-password pages; the ship and port photos; the Facebook/Twitter/LinkedIn icons (they linked to the home page); the footer "Partner", "Terms & Condition" and "Privacy Policy" links (they went to the 404 page or the home page).
 - **Alternatives considered:** Keep them as they were.
@@ -64,7 +86,7 @@ A log of choices made for the DK ENGINEER'S website and why. Add new decisions a
 
 ## D-008 — Colours from the logo: navy blue and red
 - **Date:** 2026-10-04
-- **Status:** Proposed
+- **Status:** Accepted
 - **Context:** The old site used yellow buttons that don't appear in the DK logo.
 - **Decision:** Navy blue and red taken from the logo, white backgrounds, a light blueprint-grid pattern on dark sections. Fonts: Barlow and Barlow Condensed (Google Fonts).
 - **Alternatives considered:** Keep the old yellow and dark grey.

@@ -2,7 +2,18 @@
 
 What the business is, what it sells and how customers reach it. This file holds business facts only. Technical details go in `README.md`, choices go in `decisions.md`.
 
-Facts below come from the owner's printed catalogue (`catalogue/DK-Engineers-Catalogue.pdf`, dated 2022) and the original website (now in `angular-app/`). Anything not listed here hasn't been confirmed; see "Still to confirm".
+Facts below come from the owner's printed catalogue (`catalogue/DK-Engineers-Catalogue.pdf`, dated 2022), the original website (now in `angular-app/`) and the owner's answers. Anything not listed here hasn't been confirmed; see "Still to confirm".
+
+## At a glance
+| | |
+|---|---|
+| **Name** | DK ENGINEER'S |
+| **What we do** | Manufacture hydraulic hose pipes, SS corrugated hoses and rubber products; supply industrial hardware from leading brands (14 product sections plus "Also available") |
+| **Where** | Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi - 396195, Gujarat |
+| **Customers** | Businesses across diverse industries (from the original website) |
+| **How customers buy** | They call, WhatsApp, email or send the website's inquiry form; we reply with availability and a price. No online ordering or payment |
+| **Main contact** | +91 70969 07413 (phone and WhatsApp), dkengineers6@gmail.com |
+| **Website** | https://pradipdj432.github.io/DK-Engineer/ (live) |
 
 ## What we are
 DK ENGINEER'S, G.I.D.C. Vapi, Gujarat:
@@ -55,7 +66,7 @@ The website is for information and inquiries only. It has no cart, login or onli
 | Google Maps | Listed as "DK ENGINEER'S" (link in `js/config.js`). The owner confirmed the pin is at the current address |
 | WhatsApp | +91 70969 07413 (the main number; D-010) |
 | Social media | None known |
-| Website | `pradipdj432.github.io/DK-Engineer` (not live yet) |
+| Website | https://pradipdj432.github.io/DK-Engineer/ (live on GitHub Pages; not yet linked from the Google Maps listing) |
 
 ## Still to confirm
 Tracked in `backlog.md`. Don't put these on the website until the owner confirms them.
