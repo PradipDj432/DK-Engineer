@@ -197,10 +197,10 @@ function addBusinessData() {
     "@context": "https://schema.org",
     "@type": "HardwareStore",
     name: BUSINESS.name,
-    description: "Industrial hardware supplier: pipes and fittings, valves, fasteners, tools, seals, safety equipment and more.",
+    description: "Manufacturer of hydraulic hose pipes, SS corrugated hoses and rubber products. Supplier of industrial hardware: pneumatic fittings, gasket sheets, pipes and fittings, valves, PTFE products, lifting products, tools and welding products.",
     url: site,
     logo: new URL("images/logo.png", site).href,
-    image: new URL("images/valves.png", site).href,
+    image: new URL("images/catalogue/valves-metal.jpg", site).href,
     telephone: BUSINESS.phones.map((p) => p.number),
     email: BUSINESS.email,
     address: {

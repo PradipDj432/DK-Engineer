@@ -27,6 +27,7 @@ Never commit straight to `main`, and don't create other feature branches unless 
 - Never invent business facts (prices, brands, delivery areas, business hours, years in business, customer names, certifications). If a fact isn't in `business.md`, ask the owner and list it in `backlog.md` under "Waiting on the business owner".
 - Don't show brand or partner logos (for example Astral, Polyhose, L&T) until the owner confirms the business may use them (D-009).
 - Don't add social media links, testimonials or reviews until real ones exist.
+- The products page follows the printed catalogue, `catalogue/DK-Engineers-Catalogue.pdf` (D-012). When the owner sends a new catalogue, update `products.html`, the home page tiles in `index.html` and `business.md` together. Brand names may be listed as text; brand logos still need the owner's OK (D-009, D-013).
 - Phone numbers, email, address, map and the WhatsApp number live in one place, `js/config.js`. Don't hard-code them in the pages; use the `data-call`, `data-email`, `data-address` (etc.) attributes described at the bottom of `js/common.js`.
 
 ## Code
