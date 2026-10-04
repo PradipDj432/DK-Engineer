@@ -5,7 +5,7 @@ Where the project stands right now, and a dated log of what was done. Update thi
 ## Current status
 | | |
 |---|---|
-| **Phase** | New static site merged to `main`. Not live until GitHub Pages is turned on. |
+| **Phase** | New static site merged to `main`. Work continues on the `working` branch (D-011). |
 | **Live site** | Will be `https://pradipdj432.github.io/DK-Engineer/` once Pages is on. |
 | **Blocked on** | The owner turning on GitHub Pages. |
 | **Next step** | Turn on GitHub Pages, then check the live site on a real phone. |
@@ -21,3 +21,4 @@ Where the project stands right now, and a dated log of what was done. Update thi
 - Tested in Chromium at phone (390px) and desktop (1280px) widths, served at a simulated `pradipdj432.github.io/DK-Engineer/` address: no horizontal scrolling, no script errors, no broken images. Checked the mobile menu (opens, closes with Escape), the email the form builds (address, subject, body), form validation, the WhatsApp buttons with and without a number, and the 404 page at a nested wrong address.
 - The owner confirmed +91 70969 07413 is the main number and is on WhatsApp. Turned on the WhatsApp buttons (D-010, replaces D-006). Checked that the contact page's WhatsApp link, the "Send on WhatsApp" form button and the floating button all open a chat with that number.
 - The owner asked to merge the work into `main`; they will turn on GitHub Pages themselves.
+- Set up the `working` branch from `main` and wrote the branch workflow into `CLAUDE.md` and `README.md` (D-011): every feature goes `working` → pull request → merge to `main` → sync `working` back.

@@ -2,6 +2,18 @@
 
 These rules apply to anyone working on this repo, people or AI. Keep things simple: this is a small business website for an industrial hardware supplier, not an online shop.
 
+## Branches and pull requests (D-011)
+All work happens on one branch, **`working`**. Every feature or fix goes through the same loop:
+
+1. **Sync first:** `git checkout working && git pull origin working && git merge origin/main` (after `git fetch origin`), so `working` starts from the latest `main`.
+2. **Build** the feature on `working`. Commit with a clear message. Update the docs (table below) in the same branch.
+3. **Push** `working` and **open a pull request** from `working` into `main`. One feature per pull request.
+4. **Merge** the pull request into `main` (GitHub Pages then publishes it).
+5. **Sync back:** `git fetch origin && git merge --ff-only origin/main` on `working`, then push `working`, so it matches `main` again.
+6. Start the next feature at step 2.
+
+Never commit straight to `main`, and don't create other feature branches unless the owner asks.
+
 ## Keep the docs up to date
 | When you… | Update |
 |---|---|
