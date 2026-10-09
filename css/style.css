@@ -1350,3 +1350,8 @@ p {
     display: none;
   }
 }
+
+/* "Ask on WhatsApp" button at the bottom of each product section */
+.product-ask {
+  margin-top: 20px;
+}

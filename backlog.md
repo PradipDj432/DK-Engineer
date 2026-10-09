@@ -10,9 +10,8 @@ The few things to do next, in order. Keep this list short and current.
 
 1. **Owner:** open the live site on a phone and try the menu, call and WhatsApp buttons, the inquiry form and the map.
 2. **Owner:** add `https://pradipdj432.github.io/DK-Engineer/` as the website on the Google Maps / Google Business Profile listing for "DK ENGINEER'S".
-3. **Dev:** "Ask on WhatsApp" button on each product section, with the section name in the message.
-4. **Dev:** link previews for WhatsApp/Facebook (`og:image`, `og:url`), plus `sitemap.xml` and `robots.txt`.
-5. **Owner:** send the business hours, so they can go on the contact page, the footer and Google.
+3. **Dev:** link previews for WhatsApp/Facebook (`og:image`, `og:url`), plus `sitemap.xml` and `robots.txt`.
+4. **Owner:** send the business hours, so they can go on the contact page, the footer and Google.
 
 ## Waiting on the business owner
 - [ ] **P2 · Owner** Business hours and days open.
@@ -28,7 +27,6 @@ The few things to do next, in order. Keep this list short and current.
 - [ ] **P3 · Owner** If a form that sends straight from the website is wanted: sign up for Web3Forms (free) and share the access key.
 
 ## To build
-- [ ] **P2 · Dev** "Ask on WhatsApp" button on each product section of the products page, opening a chat that names the section (for example "Hi DK ENGINEER'S, I need a price for: Valves").
 - [ ] **P2 · Dev** Link previews: `og:image`, `og:url` and `og:type` on every page, using the `pradipdj432.github.io/DK-Engineer` address (change it if a custom domain is added).
 - [ ] **P2 · Dev** `sitemap.xml` and `robots.txt` for Google, using the same address.
 - [ ] **P2 · Dev** Add business hours to the contact page, the footer and the Google listing data (once the owner sends them).
@@ -59,6 +57,7 @@ The few things to do next, in order. Keep this list short and current.
 - [x] **P1 · Dev** Home page: intro, product categories, why us, about, call to action. PR #1 (categories replaced by the catalogue's 14 sections in PR #3).
 - [x] **P1 · Dev** Products page with jump links. PR #1 (rebuilt from the catalogue in PR #3).
 - [x] **P1 · Dev** Services page and About page with the old site's text (D-004). PR #1.
+- [x] **P2 · Dev** "Ask on WhatsApp" button at the bottom of each product section, opening a chat that names the section. PR #7.
 - [x] **P1 · Dev** Contact page: address, phones, email, map, inquiry form that opens an email or WhatsApp (D-006, D-010). PR #1.
 - [x] **P1 · Dev** 404 page that works at any wrong address on GitHub Pages. PR #1.
 - [x] **P1 · Dev** Turn on WhatsApp with the main number (D-010). PR #1.

@@ -5,11 +5,11 @@ Where the project stands right now, and a dated log of what was done. Update thi
 ## Current status
 | | |
 |---|---|
-| **Phase** | Live. The new static website is built, merged to `main` and published by GitHub Pages. Five features merged so far (PRs #1–#5). |
-| **Live site** | `https://pradipdj432.github.io/DK-Engineer/`. GitHub Pages publishes every merge to `main` (Actions → "pages build and deployment"); the latest deploy, PR #5, succeeded. |
-| **Branches** | `working` and `main` are the same (in sync after PR #5). All new work starts on `working` (D-011). |
+| **Phase** | Live. The new static website is built, merged to `main` and published by GitHub Pages. Seven pull requests merged so far (#1–#7). |
+| **Live site** | `https://pradipdj432.github.io/DK-Engineer/`. GitHub Pages publishes every merge to `main` (Actions → "pages build and deployment"); the latest deploy checked, PR #6, succeeded. |
+| **Branches** | `working` and `main` are the same (in sync after PR #6; PR #7 in progress). All new work starts on `working` (D-011). |
 | **Blocked on** | Nothing. Some business details are still to come from the owner (see `backlog.md` → "Waiting on the business owner"). |
-| **Next step** | Owner: open the live site on a phone and add the website link to the Google Maps listing. Dev: "Ask on WhatsApp" button on each product section, then link previews and a sitemap. Full list in `backlog.md` → "Next up". |
+| **Next step** | Owner: open the live site on a phone and add the website link to the Google Maps listing. Dev: link previews and a sitemap. Full list in `backlog.md` → "Next up". |
 
 ## Where we are
 What's on the live site today:
@@ -17,7 +17,7 @@ What's on the live site today:
 - **Business:** DK ENGINEER'S, G.I.D.C. Vapi. Manufacturer of hydraulic hose pipes, SS corrugated hoses and rubber products, and supplier of industrial hardware from leading brands (details in `business.md`).
 - **Catalogue:** the products page follows the owner's printed catalogue: 14 sections with photos, materials, brand names (text only) and gasket sheet specs, plus "Also available". Customers can download the PDF.
 - **Contact:** Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi. Phones +91 70969 07413 (main, WhatsApp) and +91 88498 61164, email dkengineers6@gmail.com, Google map.
-- **Inquiries:** call buttons, WhatsApp buttons (including a floating one on phones), and a form that opens the customer's email app or WhatsApp with the message ready.
+- **Inquiries:** call buttons, WhatsApp buttons (including a floating one on phones and an "Ask on WhatsApp" button on every product section), and a form that opens the customer's email app or WhatsApp with the message ready.
 - **Repo:** project docs (this file, `README.md`, `business.md`, `decisions.md`, `backlog.md`, `CLAUDE.md`); the catalogue PDF and 41 brand logos kept as a backup in `catalogue/`; the old Angular site archived in `angular-app/`.
 
 ## Pull requests
@@ -29,6 +29,7 @@ What's on the live site today:
 | #4 | Shop address changed to Shop No. 117, Bass Complex, Char Rasta | 2026-10-04 |
 | #5 | Catalogue and brand logos kept in the repo as a backup | 2026-10-04 |
 | #6 | All project docs brought up to date (status, next steps, business summary) | 2026-10-04 |
+| #7 | "Ask on WhatsApp" button on each product section | 2026-10-09 |
 
 ## Log
 
@@ -48,3 +49,6 @@ What's on the live site today:
 - The owner confirmed the current address is the catalogue's: Shop No. 117, 1st Floor, Bass Complex, G.I.D.C., Char Rasta, Vapi, and that the Google Maps pin is already there. Changed it in `js/config.js` (header, footer, contact page, Google listing data) and in the contact page's search description (D-014). **PR #4 merged.**
 - The owner decided: no brand logos on the website (names stay as text), but keep the logos in the repo; keep the "Also available" section; keep the catalogue in the repo as a backup. Cut the 41 brand logos out of the PDF at 300 dpi into `catalogue/brand-logos/`, added `catalogue/README.md` (what's there, the PDF's SHA-256, a logo index, steps for a new catalogue) and an `archive/` folder for older catalogues (D-015, D-016). Checked that the PDF in the repo is byte-identical to the one the owner sent. **PR #5 merged.**
 - Confirmed GitHub Pages is on: GitHub's "pages build and deployment" ran successfully from `main` after each of PRs #1–#5. The owner reviewed the site ("looks good"), so D-003, D-005 and D-008 are now Accepted. Brought every project doc up to date: current status, pull request list, a "Next up" list in `backlog.md`, a business summary in `business.md`, a decision index in `decisions.md`, and the hosting section in `README.md`. **PR #6.**
+
+### 2026-10-09
+- Added an "Ask on WhatsApp" button at the bottom of each of the 15 product sections (14 catalogue sections plus "Also available"). It opens a chat with +91 70969 07413 and the message "Hi DK ENGINEER'S, I would like to ask about: <section name>". The number still comes from `js/config.js`. Tested at 390px: all 15 links built correctly, no horizontal scrolling. **PR #7.**
